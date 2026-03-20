@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function HeroSection({ eyebrow, title, desc, image, icons }) {
   return (
@@ -19,8 +20,15 @@ export function HeroSection({ eyebrow, title, desc, image, icons }) {
             <div className="tech-decor glow-blue" style={{ top: '-15%', right: '-15%', opacity: 0.6 }}></div>
             <div className="tech-decor glow-yellow" style={{ bottom: '-10%', left: '-10%', opacity: 0.4 }}></div>
             
-            <div className="hero__image-wrapper">
-              <img src={image} alt="DB Tech Achievement" />
+            <div className="hero__image-wrapper" style={{ position: 'relative' }}>
+              <Image 
+                src={image} 
+                alt="DB Tech Achievement" 
+                fill 
+                priority 
+                style={{ objectFit: 'cover' }}
+                sizes="100vw"
+              />
             </div>
             
             <div className="hero__floating-card hero__floating-card--1 animate-float">

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -12,10 +13,13 @@ export function Footer() {
       <div className="shell">
         <div className="globalFooter__inner">
           <div className="globalFooter__brand">
-            <img 
+            <Image 
               src="/Logo.png" 
               alt="DB Tech Innovation" 
+              width={200}
+              height={100}
               className="globalFooter__logo"
+              style={{ width: 'auto', height: 'auto' }}
             />
             <p className="globalFooter__desc">
               Expertise structurée pour la performance des institutions et des entreprises au Gabon et à l'international.

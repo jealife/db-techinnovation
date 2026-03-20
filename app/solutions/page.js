@@ -1,6 +1,7 @@
 import { SectionHeader, CTASection } from '../../components/UI';
 import { HeroSection } from '../../components/Hero';
 import { mainServices, achievements, sectorSolutions } from '../../lib/data/solutions';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Solutions Innovantes & Impact Métier",
@@ -31,7 +32,7 @@ export default function SolutionsPage() {
         eyebrow="Secteurs & Impact"
         title="Des technologies <span>sur-mesure</span> pour chaque métier"
         desc="Nous transformons les défis technologiques complexes en solutions opérationnelles simples, fluides et performantes pour les acteurs du Gabon."
-        image="/images/backgrounds/freepik__talk__32633.jpeg"
+        image="/images/solutions-hero.jpg"
         icons={ICONS}
       />
 
@@ -45,8 +46,14 @@ export default function SolutionsPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '32px' }}>
             {sectorSolutions.map((s, i) => (
               <div key={i} className="reveal card" style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', borderRadius: '32px' }}>
-                <div style={{ height: '200px', overflow: 'hidden' }}>
-                  <img src={s.img} alt={s.sector} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
+                  <Image 
+                    src={s.img} 
+                    alt={s.sector} 
+                    fill 
+                    style={{ objectFit: 'cover' }} 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
                 <div style={{ padding: '32px' }}>
                   <div style={{ color: 'var(--primary)', marginBottom: '16px' }} dangerouslySetInnerHTML={{ __html: ICONS[s.icon] }}></div>
@@ -100,8 +107,14 @@ export default function SolutionsPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '40px' }}>
             {achievements.map((a, i) => (
               <article key={i} className="reveal" style={{ display: 'grid', gap: '24px' }}>
-                <div style={{ borderRadius: '40px', overflow: 'hidden', height: '320px', boxShadow: 'var(--shadow-lg)' }}>
-                  <img src={a.image} alt={a.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{ borderRadius: '40px', overflow: 'hidden', height: '320px', boxShadow: 'var(--shadow-lg)', position: 'relative' }}>
+                  <Image 
+                    src={a.image} 
+                    alt={a.title} 
+                    fill 
+                    style={{ objectFit: 'cover' }} 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
                 <div>
                   <div style={{ color: 'var(--primary)', marginBottom: '12px' }} dangerouslySetInnerHTML={{ __html: ICONS[a.icon] || ICONS.sparkle }}></div>

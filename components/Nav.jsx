@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export function Nav() {
@@ -44,10 +45,14 @@ export function Nav() {
       <div className="max-w-[1440px] mx-auto px-5 md:px-10">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <img 
+            <Image 
               src="/Logo.png" 
               alt="DB Tech Innovation" 
+              width={160}
+              height={56}
               className="h-10 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              style={{ width: 'auto', height: 'auto' }}
+              priority
             />
           </Link>
 

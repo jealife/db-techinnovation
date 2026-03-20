@@ -2,6 +2,7 @@ import { CTASection } from '../../components/UI';
 import { HeroSection } from '../../components/Hero';
 import { Ticker } from '../../components/InfoElements';
 import { catalogueItems, catalogueGroups } from '../../lib/data/catalogue';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Catalogue des Solutions | Pôles Technologiques",
@@ -30,7 +31,7 @@ export default function CataloguePage() {
         eyebrow="Expertise & Innovation"
         title="Explorez l'étendue de nos <span>pôles technologiques</span>"
         desc="Une architecture complète de services conçus pour transformer votre organisation en un système fluide, structuré et performant au Gabon."
-        image="/images/backgrounds/freepik__3d-white-squares-of-various-sizes-arranged-in-a-ca__32632.jpeg"
+        image="/images/catalogue-hero.jpg"
         icons={ICONS}
       />
       
@@ -52,7 +53,13 @@ export default function CataloguePage() {
                   <div key={idx} className="reveal card glass-panel" style={{ display: 'flex', flexDirection: 'column', height: '100%', borderRadius: '24px', overflow: 'hidden' }}>
                     {item.img && (
                       <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
-                        <img src={item.img} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <Image 
+                          src={item.img} 
+                          alt={item.title} 
+                          fill 
+                          style={{ objectFit: 'cover' }} 
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
                         <div style={{ position: 'absolute', top: '16px', right: '16px', background: 'rgba(255,255,255,0.9)', width: '40px', height: '40px', borderRadius: '12px', display: 'grid', placeItems: 'center', color: 'var(--primary)' }} dangerouslySetInnerHTML={{ __html: ICONS[item.icon] }}></div>
                       </div>
                     )}

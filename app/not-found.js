@@ -92,7 +92,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        <div className="reveal" style={{ marginTop: '40px', color: 'var(--ink-soft)', fontSize: '0.9rem', fontWeight: 600 }}>
+        <div className="reveal" style={{ marginTop: '400px', color: 'var(--ink-soft)', fontSize: '0.9rem', fontWeight: 600 }}>
           Besoin d'aide ? <Link href="/contact" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>Contactez notre support technique</Link>
         </div>
       </div>

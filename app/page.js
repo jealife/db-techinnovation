@@ -1,6 +1,7 @@
 import { HeroSection } from '../components/Hero';
 import { SectionHeader, FeatureCard, CTASection } from '../components/UI';
 import { HighlightStrip } from '../components/InfoElements';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Accueil | Transformation Digitale & Architecture GED",
@@ -32,7 +33,7 @@ export default function Home() {
         eyebrow="Innovation Digitale"
         title="Transformez vos opérations avec une architecture <span>digitale premium</span>"
         desc="Nous concevons des solutions sur mesure pour structurer l’information, fluidifier les circuits et donner à vos équipes une meilleure capacité d’exécution."
-        image="/images/backgrounds/sales-manager-examining-success-efficiency-metrics-within-firm.jpg"
+        image="/images/hero-home.jpg"
         icons={ICONS}
       />
 
@@ -69,8 +70,14 @@ export default function Home() {
             </div>
             <div className="reveal slide-right" style={{ position: 'relative' }}>
               <div className="tech-decor glow-blue" style={{ top: '-40px', right: '-40px', opacity: 0.4 }}></div>
-              <div style={{ position: 'relative', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', zIndex: 1 }}>
-                <img src="/images/backgrounds/thinking-promising-project.jpg" alt="Organisation" />
+              <div style={{ position: 'relative', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', zIndex: 1, aspectRatio: '16/10' }}>
+                <Image 
+                  src="/images/organisation-home.jpg" 
+                  alt="Organisation" 
+                  fill 
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 980px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
