@@ -26,6 +26,7 @@ export function HeroSection({ eyebrow, title, desc, image, icons }) {
                 alt="DB Tech Achievement" 
                 fill 
                 priority 
+                placeholder={typeof image === 'string' ? undefined : 'blur'}
                 style={{ objectFit: 'cover' }}
                 sizes="(max-width: 980px) 100vw, 50vw"
               />

@@ -55,6 +55,7 @@ export default function RootLayout({ children }) {
     <html
       lang="fr"
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
         <Nav />

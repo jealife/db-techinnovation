@@ -3,6 +3,10 @@ import { SectionHeader, FeatureCard, CTASection } from '../components/UI';
 import { HighlightStrip } from '../components/InfoElements';
 import Image from 'next/image';
 
+// Static imports for better performance and blur placeholders
+import heroImg from '../public/images/hero-home.jpg';
+import orgImg from '../public/images/organisation-home.jpg';
+
 export const metadata = {
   title: "Accueil | Transformation Digitale & Architecture GED",
   description: "DB Tech Innovation accompagne les institutions et entreprises au Gabon dans leur transformation digitale : GED, Automatisation de processus et Intelligence Artificielle.",
@@ -33,7 +37,7 @@ export default function Home() {
         eyebrow="Innovation Digitale"
         title="Transformez vos opérations avec une architecture <span>digitale premium</span>"
         desc="Nous concevons des solutions sur mesure pour structurer l’information, fluidifier les circuits et donner à vos équipes une meilleure capacité d’exécution."
-        image="/images/hero-home.jpg"
+        image={heroImg}
         icons={ICONS}
       />
 
@@ -72,9 +76,10 @@ export default function Home() {
               <div className="tech-decor glow-blue" style={{ top: '-40px', right: '-40px', opacity: 0.4 }}></div>
               <div style={{ position: 'relative', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', zIndex: 1, aspectRatio: '16/10' }}>
                 <Image 
-                  src="/images/organisation-home.jpg" 
+                  src={orgImg} 
                   alt="Organisation" 
                   fill 
+                  placeholder="blur"
                   style={{ objectFit: 'cover' }}
                   sizes="(max-width: 980px) 100vw, 50vw"
                 />

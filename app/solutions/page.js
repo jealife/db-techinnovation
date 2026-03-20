@@ -3,6 +3,8 @@ import { HeroSection } from '../../components/Hero';
 import { mainServices, achievements, sectorSolutions } from '../../lib/data/solutions';
 import Image from 'next/image';
 
+import solutionsHeroImg from '../../public/images/solutions-hero.jpg';
+
 export const metadata = {
   title: "Solutions Innovantes & Impact Métier",
   description: "Découvrez notre expertise sectorielle : Banque, Santé, Éducation et Secteur Public. Des solutions conçues pour vos réalités opérationnelles au Gabon.",
@@ -32,7 +34,7 @@ export default function SolutionsPage() {
         eyebrow="Secteurs & Impact"
         title="Des technologies <span>sur-mesure</span> pour chaque métier"
         desc="Nous transformons les défis technologiques complexes en solutions opérationnelles simples, fluides et performantes pour les acteurs du Gabon."
-        image="/images/solutions-hero.jpg"
+        image={solutionsHeroImg}
         icons={ICONS}
       />
 

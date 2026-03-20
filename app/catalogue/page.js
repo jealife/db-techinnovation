@@ -4,6 +4,8 @@ import { Ticker } from '../../components/InfoElements';
 import { catalogueItems, catalogueGroups } from '../../lib/data/catalogue';
 import Image from 'next/image';
 
+import catalogueHeroImg from '../../public/images/catalogue-hero.jpg';
+
 export const metadata = {
   title: "Catalogue des Solutions | Pôles Technologiques",
   description: "Explorez notre catalogue complet de solutions : GED, Workflow, IA, Mobile Apps et Gov-Tech pour moderniser votre organisation.",
@@ -31,7 +33,7 @@ export default function CataloguePage() {
         eyebrow="Expertise & Innovation"
         title="Explorez l'étendue de nos <span>pôles technologiques</span>"
         desc="Une architecture complète de services conçus pour transformer votre organisation en un système fluide, structuré et performant au Gabon."
-        image="/images/catalogue-hero.jpg"
+        image={catalogueHeroImg}
         icons={ICONS}
       />
       
