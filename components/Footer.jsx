@@ -2,20 +2,20 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="globalFooter" style={{ position: 'relative', overflow: 'hidden' }}>
-      <div className="tech-decor glow-blue" style={{ bottom: '-10%', left: '-5%', opacity: 0.4 }}></div>
-      <div className="tech-decor tech-grid" style={{ opacity: 0.3 }}></div>
-      <div className="tech-decor tech-shape" style={{ top: '15%', right: '5%', borderStyle: 'double', opacity: 0.6 }}></div>
-      <div className="tech-decor tech-line" style={{ top: '10%', left: '0', width: '100%', opacity: 0.2 }}></div>
-      <div className="tech-decor tech-node" style={{ top: '10%', left: '30%' }}></div>
-      <div className="tech-decor tech-node" style={{ top: '10%', right: '15%' }}></div>
+    <footer className="globalFooter">
+      <div className="tech-decor glow-blue footer-glow-1"></div>
+      <div className="tech-decor tech-grid footer-grid"></div>
+      <div className="tech-decor tech-shape footer-shape-1"></div>
+      <div className="tech-decor tech-line footer-line-1"></div>
+      <div className="tech-decor tech-node footer-node-1"></div>
+      <div className="tech-decor tech-node footer-node-2"></div>
       <div className="shell">
         <div className="globalFooter__inner">
           <div className="globalFooter__brand">
             <img 
               src="/Logo.png" 
               alt="DB Tech Innovation" 
-              style={{ height: '100px', width: 'auto', objectFit: 'contain', marginBottom: '40px', filter: 'brightness(0) invert(1)' }}
+              className="globalFooter__logo"
             />
             <p className="globalFooter__desc">
               Expertise structurée pour la performance des institutions et des entreprises au Gabon et à l'international.

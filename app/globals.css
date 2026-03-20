@@ -498,76 +498,48 @@ section {
 
 /* Footer Improvements */
 .globalFooter {
-  background: rgba(15, 23, 42, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-  padding: 80px 0 40px;
+  @apply relative overflow-hidden bg-[#0F172A]/92 backdrop-blur-[20px] border-t border-white/10 text-white pt-20 pb-10;
 }
 
 .globalFooter__inner {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px;
-  margin-bottom: 60px;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-10 mb-[60px];
 }
 
-@media (max-width: 1024px) {
-  .globalFooter__inner {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .globalFooter__inner {
-    grid-template-columns: 1fr;
-  }
-}
+/* Media queries handled by grid-cols-* prefix in globalFooter__inner */
 
 .globalFooter__brand h2 {
-  color: white;
-  margin-bottom: 20px;
+  @apply text-white mb-5;
 }
 
+.globalFooter__logo {
+  @apply h-[100px] w-auto object-contain mb-10 brightness-0 invert;
+}
+
+.footer-glow-1 { @apply bottom-[-10%] left-[-5%] opacity-40; }
+.footer-grid { @apply opacity-30; }
+.footer-shape-1 { @apply top-[15%] right-[5%] border-double opacity-60; }
+.footer-line-1 { @apply top-[10%] left-0 w-full opacity-20; }
+.footer-node-1 { @apply top-[10%] left-[30%]; }
+.footer-node-2 { @apply top-[10%] right-[15%]; }
+
 .globalFooter__desc {
-  color: rgba(255, 255, 255, 0.6);
-  max-width: 300px;
+  @apply text-white/60 max-w-[300px];
 }
 
 .globalFooter__title {
-  font-weight: 700;
-  margin-bottom: 24px;
-  font-size: 1.125rem;
-}
-
-.footer-link {
-  display: block;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 12px;
-}
-
-.footer-link:hover {
+  @apply font-bold mb-6 text-lg;
   color: var(--accent);
 }
 
-.globalFooter__bottom {
-  padding-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.4);
+.footer-link {
+  @apply block text-white/60 mb-3 hover:text-accent transition-colors;
 }
 
-@media (max-width: 640px) {
-  .globalFooter__bottom {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
+.globalFooter__bottom {
+  @apply pt-10 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-sm text-white/40 space-y-4 sm:space-y-0 text-center sm:text-left;
 }
+
+/* Media queries handled by flex-col sm:flex-row and text-center sm:text-left in globalFooter__bottom */
 
 /* CTA Section - Global */
 .cta-section {
