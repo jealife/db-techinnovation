@@ -444,6 +444,13 @@ section {
   gap: 40px;
 }
 
+@media (max-width: 980px) {
+  .grid-4, .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
@@ -598,6 +605,19 @@ section {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Contact Form Specific Grid */
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .contact-form__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Utilities */

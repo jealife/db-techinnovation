@@ -42,7 +42,7 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '20px' }}>
+          <div className="contact-form__grid">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <label htmlFor="name" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--ink-soft)' }}>Nom complet</label>
               <input 
