@@ -27,7 +27,7 @@ export function HeroSection({ eyebrow, title, desc, image, icons }) {
                 fill 
                 priority 
                 style={{ objectFit: 'cover' }}
-                sizes="100vw"
+                sizes="(max-width: 980px) 100vw, 50vw"
               />
             </div>
             
