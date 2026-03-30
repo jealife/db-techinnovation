@@ -28,7 +28,7 @@ export function FloatingActions() {
     <div className="floating-actions" style={{ position: 'fixed', bottom: '32px', right: '32px', zIndex: 1000, display: 'flex', flexDirection: 'column', gap: '14px', alignItems: 'center' }}>
       {/* Bouton WhatsApp */}
       <a 
-        href="https://wa.me/24102055501" 
+        href="https://wa.me/24177401743" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fab fab--whatsapp" 
@@ -44,7 +44,7 @@ export function FloatingActions() {
 
       {/* Bouton Appel Direct */}
       <a 
-        href="tel:+24102055501" 
+        href="tel:+24177401743" 
         className="fab fab--call" 
         title="Nous appeler"
         style={{ 

@@ -40,7 +40,7 @@ export function Footer() {
             <nav className="globalFooter__links">
               <Link href="/contact" className="footer-link">Page de Contact</Link>
               <a href="mailto:services@dbtech-innovation.com" className="footer-link">services@dbtech-innovation.com</a>
-              <a href="tel:+24102055501" className="footer-link">+241 02 05 55 01</a>
+              <a href="tel:+24177401743" className="footer-link">+241 77 40 17 43</a>
             </nav>
           </div>
 

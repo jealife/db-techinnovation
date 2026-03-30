@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <div style={{ width: '48px', height: '48px', background: 'white', color: 'var(--primary)', borderRadius: '12px', display: 'grid', placeItems: 'center', flexShrink: 0, boxShadow: 'var(--shadow-sm)' }} dangerouslySetInnerHTML={{ __html: ICONS.phone }}></div>
                 <div>
                   <div className="text-sm font-bold" style={{ color: 'var(--ink-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Téléphone / WhatsApp</div>
-                  <a href="tel:+24102055501" className="text-lg font-bold hover:text-primary transition-colors">+241 02 05 55 01</a>
+                  <a href="tel:+24177401743" className="text-lg font-bold hover:text-primary transition-colors">+241 77 40 17 43</a>
                 </div>
               </div>
 
