@@ -1,5 +1,6 @@
 import { HeroSection } from '../components/Hero';
 import { SectionHeader, FeatureCard, CTASection } from '../components/UI';
+import { PartnersSection } from '../components/Partners';
 import { HighlightStrip } from '../components/InfoElements';
 import Image from 'next/image';
 
@@ -42,6 +43,7 @@ export default function Home() {
       />
 
       <HighlightStrip label="Pensé pour" items={sectors} />
+      <PartnersSection title="Ils nous accompagnent dans l'innovation" style={{ paddingTop: 0, paddingBottom: 100 }} />
 
       <section id="solutions">
         <div className="shell">

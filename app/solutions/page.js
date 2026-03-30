@@ -1,6 +1,7 @@
 import { SectionHeader, CTASection } from '../../components/UI';
+import { PartnersSection } from '../../components/Partners';
 import { HeroSection } from '../../components/Hero';
-import { mainServices, achievements, sectorSolutions } from '../../lib/data/solutions';
+import { mainServices, partners, sectorSolutions } from '../../lib/data/solutions';
 import Image from 'next/image';
 
 import solutionsHeroImg from '../../public/images/solutions-hero.jpg';
@@ -99,35 +100,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section id="achievements" className="bg-soft">
-        <div className="shell">
-          <SectionHeader 
-            eyebrow="Réalisations"
-            title="Nos grandes réalisations"
-            desc="L'expression de notre savoir-faire au service de projets stratégiques majeurs."
-          />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '40px' }}>
-            {achievements.map((a, i) => (
-              <article key={i} className="reveal" style={{ display: 'grid', gap: '24px' }}>
-                <div style={{ borderRadius: '40px', overflow: 'hidden', height: '320px', boxShadow: 'var(--shadow-lg)', position: 'relative' }}>
-                  <Image 
-                    src={a.image} 
-                    alt={a.title} 
-                    fill 
-                    style={{ objectFit: 'cover' }} 
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <div>
-                  <div style={{ color: 'var(--primary)', marginBottom: '12px' }} dangerouslySetInnerHTML={{ __html: ICONS[a.icon] || ICONS.sparkle }}></div>
-                  <h3 className="text-xl" style={{ marginBottom: '12px', lineHeight: 1.3 }}>{a.title}</h3>
-                  <p style={{ color: 'var(--ink-muted)', fontSize: '0.9375rem' }}>{a.desc}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PartnersSection />
 
       <CTASection 
         title="Prêt à rejoindre l'innovation ?"

@@ -44,13 +44,13 @@ export function Footer() {
             </nav>
           </div>
 
-          <div className="globalFooter__group">
+          {/* <div className="globalFooter__group">
             <h4 className="globalFooter__title">Légal</h4>
             <nav className="globalFooter__links">
               <span className="footer-link">Mentions Légales</span>
               <span className="footer-link">Confidentialité</span>
             </nav>
-          </div>
+          </div> */}
         </div>
 
         <div className="globalFooter__bottom">
