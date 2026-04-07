@@ -58,7 +58,7 @@ export default function ContactPage() {
                 <div style={{ width: '48px', height: '48px', background: 'white', color: 'var(--primary)', borderRadius: '12px', display: 'grid', placeItems: 'center', flexShrink: 0, boxShadow: 'var(--shadow-sm)' }} dangerouslySetInnerHTML={{ __html: ICONS.mail }}></div>
                 <div>
                   <div className="text-sm font-bold" style={{ color: 'var(--ink-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email</div>
-                  <a href="mailto:services@dbtech-innovation.com" className="text-lg font-bold hover:text-primary transition-colors">services@dbtech-innovation.com</a>
+                  <a href="mailto:contact@db-techinnovation.com" className="text-lg font-bold hover:text-primary transition-colors">contact@db-techinnovation.com</a>
                 </div>
               </div>
 
